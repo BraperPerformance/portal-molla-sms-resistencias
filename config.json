@@ -1,0 +1,92 @@
+{
+  "cliente": "SMS Resistências Elétricas",
+  "agencia": "Agência Molla",
+  "ano": 2026,
+  "senha": "sms#2026#",
+  "url_portal": "portal-molla-sms-resistencias.vercel.app",
+  "whatsapp": "+55 11 99555-0735",
+  "logo_cliente": "./logos/cliente.png",
+  "logo_agencia": "./logos/agencia.jpeg",
+  "hero_texto": "Todo o material da conta de Google Ads da SMS Resistências reunido em um só lugar: o planejamento das campanhas e os relatórios de acompanhamento. Selecione um item abaixo para abrir.",
+  "resumo_guia": "O portal reúne o planejamento das campanhas de Google Ads e os relatórios de acompanhamento da conta em um só endereço.",
+  "cores": {
+    "dark": "#4A0D0A",
+    "dark2": "#6B120E",
+    "deep": "#9B1712",
+    "brand": "#E1211B",
+    "mid": "#EF4A44",
+    "light": "#F6B3B0",
+    "pale": "#FDECEB",
+    "accent": "#B3120D",
+    "text": "#2A1614",
+    "muted": "#8A6A66",
+    "line": "#F2DEDC",
+    "bg": "#FDF7F6"
+  },
+  "categorias": [
+    {
+      "id": "planejamento",
+      "nome": "Planejamento",
+      "icone": "🗂️",
+      "descricao": "A estrutura das campanhas e a revisão de palavras-chave, em planilhas abertas para consulta.",
+      "documentos": [
+        {
+          "chave": "estrutura_campanhas",
+          "titulo": "Estrutura e Planejamento das Campanhas",
+          "tag": "Planilha",
+          "descricao": "Como as campanhas de Google Ads estão organizadas: divisão por linha de produto, palavras-chave e orçamento de cada frente.",
+          "meta": "Google Ads · Planilha online",
+          "cta": "Abrir planilha",
+          "url_externa": "https://docs.google.com/spreadsheets/d/1nKGXExFA1pgm-tjuR2vLRuyKhiwG2CNZqmPkWT2C9xo/edit?usp=drive_link"
+        },
+        {
+          "chave": "revisao_palavras_chave",
+          "titulo": "Revisão de Palavras-chave e Termos de Pesquisa",
+          "tag": "Planilha",
+          "descricao": "Levantamento das buscas que as campanhas captaram, separando o que traz cliente do que é desperdício de verba.",
+          "meta": "Google Ads · Março 2026",
+          "cta": "Abrir planilha",
+          "url_externa": "https://docs.google.com/spreadsheets/d/1LkZoQbRnqU8UV62rM9WOMEow3W5KfQ4o04w9qZOIKQs/edit?usp=drive_link"
+        }
+      ]
+    },
+    {
+      "id": "relatorios",
+      "nome": "Relatórios",
+      "icone": "📊",
+      "descricao": "O acompanhamento da conta: o que foi executado em cada período e os pontos que dependem de definição.",
+      "documentos": [
+        {
+          "chave": "report_20260720_performance",
+          "titulo": "Performance do Semestre · Jan a Jul",
+          "titulo_viewer": "Performance Google Ads · Jan–Jul 2026",
+          "tag": "Análise",
+          "descricao": "Balanço do primeiro semestre e parcial de julho: evolução de custo por visita, volume, presença na busca e as prioridades dos próximos 60 dias.",
+          "meta": "Google Ads · 1 jan a 20 jul de 2026",
+          "cta": "Abrir análise",
+          "arquivo": "./documentos/report_20260720_performance-jan-jul.html"
+        },
+        {
+          "chave": "report_20260615",
+          "titulo": "Atualização da Conta · Junho",
+          "titulo_viewer": "Atualização da Conta · Junho 2026",
+          "tag": "Status",
+          "descricao": "O que entrou no ar nas campanhas, os bloqueios de buscas aplicados e os pontos que ficaram aguardando confirmação.",
+          "meta": "Google Ads · 15 de junho de 2026",
+          "cta": "Abrir relatório",
+          "arquivo": "./documentos/report_20260615_status-semanal.html"
+        },
+        {
+          "chave": "report_20260701",
+          "titulo": "Atualização da Conta · Julho",
+          "titulo_viewer": "Atualização da Conta · Julho 2026",
+          "tag": "Status",
+          "descricao": "Continuidade do acompanhamento, com as definições tomadas no período e os desdobramentos para as campanhas.",
+          "meta": "Google Ads · 1º de julho de 2026",
+          "cta": "Abrir relatório",
+          "arquivo": "./documentos/report_20260701_status-semanal_definicoes-importantes.html"
+        }
+      ]
+    }
+  ]
+}
