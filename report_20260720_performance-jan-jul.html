@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Performance Google Ads · Jan–Jul 2026 — SMS Resistências | Agência Molla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   CENTRAL DO CLIENTE · SMS RESISTÊNCIAS ELÉTRICAS
+   Sistema de design compartilhado — todos os documentos usam este arquivo.
+   Blend: estrutura seccionada (Brasil Fuso) + componentes de leitura (MetLife)
+   Paleta: vermelho SMS, branco, preto e cinzas quentes.
+   ========================================================================== */
+:root{
+  /* marca */
+  --red:#E1211B; --red-deep:#B3120D; --red-dark:#7A0A07; --red-ink:#4A0605;
+  --red-mid:#EF4A44; --red-soft:#FDECEB; --red-line:#F6D9D7;
+  --red-glow:rgba(225,33,27,.10); --red-glow-2:rgba(225,33,27,.18);
+  /* neutros quentes */
+  --ink:#141110; --ink-2:#2A2422; --text:#241C1B; --muted:#7A6E6B;
+  --paper:#FCFAF9; --paper-2:#F6F1F0; --card:#FFFFFF; --line:#EBE2E0;
+  /* semânticos */
+  --good:#12855A; --good-soft:#E6F5EE; --warn:#B8801A; --warn-soft:#FBF2DE;
+  --info:#2B5CC4; --info-soft:#EAF0FD;
+  /* assinatura da agência (uso restrito ao rodapé/header) */
+  --molla:#FF671F;
+  --radius:20px; --radius-sm:14px;
+  --shadow:0 14px 38px rgba(60,20,18,.08);
+  --shadow-lg:0 22px 56px rgba(60,20,18,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  background:var(--paper); color:var(--text); line-height:1.6;
+  -webkit-font-smoothing:antialiased; font-size:16px;
+}
+.mono{font-family:'JetBrains Mono','SFMono-Regular',Consolas,monospace}
+h1,h2,h3,h4,.display{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em}
+
+/* ---------- HEADER FIXO (cliente à esquerda, agência assina) ---------- */
+.hdr{
+  position:sticky; top:0; z-index:60; background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px); border-bottom:1px solid var(--line);
+}
+.hdr-in{max-width:1080px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:16px}
+.hdr-logo{height:36px;width:auto;display:block}
+.hdr-sep{width:1px;height:26px;background:var(--line)}
+.hdr-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--muted);font-weight:700}
+.hdr-back{
+  margin-left:auto;display:inline-flex;align-items:center;gap:7px;background:var(--red);
+  color:#fff;text-decoration:none;padding:9px 17px;border-radius:999px;
+  font-size:13px;font-weight:700;transition:background .2s;white-space:nowrap;
+}
+.hdr-back:hover{background:var(--red-deep)}
+.hdr-pdf{
+  display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--red);
+  border:1.5px solid var(--red-line);padding:9px 16px;border-radius:999px;
+  font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s;
+}
+.hdr-pdf:hover{background:var(--red-soft)}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:
+    radial-gradient(circle at 12% 0%, var(--red-glow), transparent 45%),
+    radial-gradient(circle at 92% 8%, rgba(225,33,27,.06), transparent 50%),
+    linear-gradient(180deg,#fff 0%,var(--paper) 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-in{max-width:1080px;margin:0 auto;padding:60px 28px 46px}
+.chip{
+  display:inline-flex;align-items:center;gap:9px;background:var(--red-soft);
+  border:1px solid var(--red-line);color:var(--red-deep);padding:7px 16px;border-radius:999px;
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;
+  letter-spacing:.8px;text-transform:uppercase;margin-bottom:22px;
+}
+.chip .bullet{width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0}
+h1.big{font-size:clamp(32px,5vw,52px);font-weight:700;line-height:1.05;margin-bottom:20px;color:var(--ink)}
+h1.big em{font-style:normal;color:var(--red)}
+.hero-lead{font-size:17.5px;color:#4a403e;max-width:730px;line-height:1.62}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:34px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);
+}
+.hero-meta .mi .l{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:5px}
+.hero-meta .mi .v{font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:600;color:var(--ink)}
+
+/* ---------- LAYOUT ---------- */
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+section.blk{padding:54px 0;border-bottom:1px solid var(--line)}
+section.blk:last-of-type{border-bottom:none}
+.sec-eyebrow{
+  display:flex;align-items:center;gap:12px;margin-bottom:16px;
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--red);font-weight:700;
+}
+.sec-eyebrow .rule{width:34px;height:2px;background:var(--red);flex-shrink:0}
+h2.sec{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.15;margin-bottom:14px;color:var(--ink)}
+h2.sec em{font-style:normal;color:var(--red)}
+.sec-lead{font-size:16.5px;color:#4a403e;max-width:790px;margin-bottom:30px;line-height:1.62}
+h3.sub{font-size:20px;font-weight:700;margin:34px 0 10px;color:var(--ink)}
+p.body{font-size:15.5px;color:#4a403e;margin-bottom:14px;line-height:1.65}
+p.body b{color:var(--ink)}
+
+/* ---------- KPI ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:6px 0 8px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:22px 20px;box-shadow:var(--shadow)}
+.kpi.solid{background:var(--red);border-color:var(--red)}
+.kpi.solid .kv,.kpi.solid .kl,.kpi.solid .ks{color:#fff}
+.kpi.solid .ks{color:rgba(255,255,255,.82)}
+.kpi.dark{background:var(--ink);border-color:var(--ink)}
+.kpi.dark .kv{color:#fff}.kpi.dark .kl{color:#a89f9d}.kpi.dark .ks{color:#c9c1bf}
+.kl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1.1px;
+  text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:10px;display:flex;
+  align-items:center;gap:8px;flex-wrap:wrap}
+.kv{font-family:'Space Grotesk',sans-serif;font-size:31px;font-weight:700;line-height:1;
+  letter-spacing:-1.2px;color:var(--ink)}
+.ks{font-size:12.5px;color:var(--muted);margin-top:9px;line-height:1.45}
+.badge{display:inline-block;font-size:10px;font-weight:800;padding:3px 8px;border-radius:5px;
+  font-family:'JetBrains Mono',monospace;letter-spacing:.4px;text-transform:uppercase}
+.badge.up{background:var(--good-soft);color:var(--good)}
+.badge.dn{background:var(--good-soft);color:var(--good)}
+.badge.wa{background:var(--warn-soft);color:var(--warn)}
+.badge.nu{background:var(--red-soft);color:var(--red-deep)}
+.badge.in{background:var(--info-soft);color:var(--info)}
+
+/* ---------- CARD / CHART ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px;box-shadow:var(--shadow);margin:22px 0}
+.card h4{font-size:17px;font-weight:700;margin-bottom:5px;color:var(--ink)}
+.card .cap{font-size:14px;color:var(--muted);margin-bottom:22px;line-height:1.5}
+.card svg{width:100%;height:auto;display:block;overflow:visible}
+.legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px;padding-top:16px;
+  border-top:1px solid var(--line);font-size:12.5px;color:#4a403e}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:7px;vertical-align:-1px}
+
+/* comparação lado a lado (MetLife) */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0}
+.cmp{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--muted);
+  border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow)}
+.cmp.win{border-top-color:var(--red)}
+.cmp .role{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:1.1px;
+  text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px}
+.cmp .name{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;margin-bottom:16px;color:var(--ink)}
+.cmp .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:11px 0;border-top:1px solid var(--line);font-size:14px}
+.cmp .row:first-of-type{border-top:none}
+.cmp .row span{color:var(--muted)}
+.cmp .row b{font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--ink);font-weight:700}
+.cmp.win .row b{color:var(--red)}
+
+/* barras horizontais (MetLife) */
+.bars{display:flex;flex-direction:column;gap:13px}
+.bar-row{display:grid;grid-template-columns:190px 1fr 76px;align-items:center;gap:14px}
+.bar-lbl{font-size:13.5px;color:#4a403e;text-align:right;line-height:1.3}
+.bar-lbl.me{font-weight:800;color:var(--red)}
+.bar-track{background:var(--paper-2);border-radius:6px;height:24px;overflow:hidden}
+.bar-fill{height:100%;border-radius:6px;background:var(--line)}
+.bar-fill.me{background:var(--red)}
+.bar-val{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:#4a403e}
+.bar-val.me{color:var(--red)}
+
+/* ---------- TABELA ---------- */
+.tbl-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{background:var(--paper-2);text-align:left;padding:13px 16px;font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;text-transform:uppercase;letter-spacing:.9px;color:var(--muted);font-weight:700;white-space:nowrap}
+td{padding:13px 16px;border-top:1px solid var(--line);vertical-align:middle}
+td.n{font-family:'JetBrains Mono',monospace;text-align:right;white-space:nowrap;font-weight:600}
+tr.hi td{background:var(--red-soft)}
+tr.hi td:first-child{font-weight:700}
+
+/* ---------- CALLOUT / ITENS ---------- */
+.callout{border-left:4px solid var(--red);background:var(--red-soft);border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  padding:24px 26px;margin:26px 0}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.callout.info{border-left-color:var(--info);background:var(--info-soft)}
+.callout h4{font-size:17px;font-weight:700;margin-bottom:9px;color:var(--ink)}
+.callout p{font-size:15px;color:#4a403e;line-height:1.62}
+.callout p b{color:var(--ink)}
+
+.items{margin:22px 0}
+.it{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.it:first-child{border-top:none}
+.it-ic{width:42px;height:42px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;
+  justify-content:center;font-size:19px;background:var(--red-soft)}
+.it-ic.g{background:var(--good-soft)}.it-ic.b{background:var(--info-soft)}.it-ic.a{background:var(--warn-soft)}
+.it h4{font-size:17px;font-weight:700;margin-bottom:5px;color:var(--ink)}
+.it p{font-size:14.5px;color:#4a403e;line-height:1.58}
+
+/* ---------- RECOMENDAÇÕES (Brasil Fuso) ---------- */
+.recs{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.rec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:22px 24px;display:flex;gap:18px;box-shadow:var(--shadow)}
+.rec-n{width:34px;height:34px;border-radius:10px;background:var(--red);color:#fff;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;
+  font-size:14px;font-weight:700}
+.rec-b h4{font-size:17px;font-weight:700;margin-bottom:6px;color:var(--ink);display:flex;
+  align-items:center;gap:10px;flex-wrap:wrap}
+.rec-b p{font-size:14.5px;color:#4a403e;line-height:1.58}
+.prio{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:800;padding:3px 8px;
+  border-radius:5px;letter-spacing:.5px}
+.prio.p1{background:var(--red);color:#fff}
+.prio.p2{background:var(--warn-soft);color:var(--warn)}
+.prio.p3{background:var(--paper-2);color:var(--muted)}
+
+/* ---------- FOOTER ---------- */
+.ft{background:var(--ink);color:#fff;margin-top:0}
+.ft-in{max-width:1080px;margin:0 auto;padding:40px 28px;display:flex;align-items:center;
+  justify-content:space-between;gap:22px;flex-wrap:wrap}
+.ft-logo{height:26px;width:auto;display:block;opacity:.95}
+.ft-txt{font-size:13px;color:#a89f9d;line-height:1.6;text-align:right;max-width:520px}
+.ft-txt b{color:#fff}
+.note{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:12px;line-height:1.5}
+
+/* ---------- RESPONSIVO ---------- */
+@media(max-width:860px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .cmp-grid{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:130px 1fr 66px;gap:10px}
+  .bar-lbl{font-size:12.5px}
+  .hero-in{padding:44px 20px 36px}
+  .wrap{padding:0 20px}
+  .hdr-in{padding:10px 20px;gap:10px}
+  .hdr-tag{display:none}
+}
+@media(max-width:560px){
+  .kpis{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:96px 1fr 58px}
+  .ft-in{flex-direction:column;align-items:flex-start}
+  .ft-txt{text-align:left}
+  .hdr-logo{height:28px}
+}
+
+/* ---------- IMPRESSÃO ---------- */
+@media print{
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body{background:#fff}
+  .hdr{position:static;background:#fff}
+  .hdr-back,.hdr-pdf{display:none!important}
+  .card,.tbl-wrap,.callout,.rec,.cmp,.kpi,.it{page-break-inside:avoid;break-inside:avoid}
+  section.blk{page-break-inside:auto}
+  h2.sec,h3.sub{page-break-after:avoid;break-after:avoid}
+  @page{margin:12mm}
+}
+
+</style>
+</head><body>
+
+<header class="hdr"><div class="hdr-in">
+  <img class="hdr-logo" src="data:image/png;base64,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" alt="SMS Resistências Elétricas" />
+  <span class="hdr-sep"></span>
+  <span class="hdr-tag">Central do Cliente</span>
+  <button class="hdr-pdf" onclick="window.print()">Baixar PDF</button>
+</div></header>
+
+<!-- HERO -->
+<div class="hero"><div class="hero-in">
+  <span class="chip"><span class="bullet"></span>Performance Google Ads · 1 jan a 20 jul 2026</span>
+  <h1 class="big">O semestre em números —<br><em>e o que eles mostram.</em></h1>
+  <p class="hero-lead">Balanço do primeiro semestre e o parcial de julho. Em resumo: a conta está comprando mais visitas, gastando menos por visita e aparecendo mais vezes na busca do que no começo do ano. Este documento mostra de onde veio esse ganho e o que ainda dá para melhorar.</p>
+  <div class="hero-meta">
+    <div class="mi"><div class="l">Cliente</div><div class="v">SMS Resistências</div></div>
+    <div class="mi"><div class="l">Canal</div><div class="v">Google Ads · Pesquisa</div></div>
+    <div class="mi"><div class="l">Período</div><div class="v">01/jan a 20/jul de 2026</div></div>
+    <div class="mi"><div class="l">Foco da leitura</div><div class="v">Visitas · Custo · Presença</div></div>
+  </div>
+</div></div>
+
+<!-- 01 PANORAMA -->
+<section class="blk"><div class="wrap">
+  <div class="sec-eyebrow"><span class="rule"></span>01 — Panorama</div>
+  <h2 class="sec">Mais gente chegando, <em>cada visita custando menos.</em></h2>
+  <p class="sec-lead">O custo por visita caiu de R$ 7,42 em março para R$ 4,57 em julho — redução de 38%. No mesmo movimento, o ritmo subiu de 52 visitas/dia no primeiro trimestre para 74/dia em julho. A economia não veio de comprar menos: veio de comprar melhor.</p>
+
+  <div class="kpis">
+    <div class="kpi solid"><div class="kl">Custo por visita</div><div class="kv">R$ 4,57</div><div class="ks">▼ 38% vs. o pico de março. Menor valor do ano.</div></div>
+    <div class="kpi"><div class="kl">Visitas ao site</div><div class="kv">7.345</div><div class="ks">A partir de 94 mil exibições dos anúncios.</div></div>
+    <div class="kpi"><div class="kl">Taxa de clique <span class="badge up">▲</span></div><div class="kv">7,79%</div><div class="ks">Pico de 8,80% em junho — recorde da conta.</div></div>
+    <div class="kpi dark"><div class="kl">Investimento</div><div class="kv">R$ 39,4k</div><div class="ks">Em 6 meses e 20 dias de veiculação.</div></div>
+  </div>
+  <p class="note">Julho considera 20 dias corridos. Para comparações justas, as leituras usam o ritmo diário em vez do total do mês.</p>
+
+  <div class="card">
+    <h4>Custo por visita, mês a mês</h4>
+    <p class="cap">A linha que mais importa: quanto a SMS paga para trazer uma pessoa até o site. Quanto mais baixa, melhor.</p>
+    <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Custo por visita por mês">
+      <line x1="60" y1="250" x2="800" y2="250" stroke="#EBE2E0" stroke-width="1.5"/>
+      <line x1="60" y1="180" x2="800" y2="180" stroke="#F6F1F0" stroke-width="1"/>
+      <line x1="60" y1="110" x2="800" y2="110" stroke="#F6F1F0" stroke-width="1"/>
+      <line x1="60" y1="40" x2="800" y2="40" stroke="#F6F1F0" stroke-width="1"/>
+      <text x="52" y="255" font-size="11" fill="#7A6E6B" text-anchor="end" font-family="monospace">0</text>
+      <text x="52" y="185" font-size="11" fill="#7A6E6B" text-anchor="end" font-family="monospace">3</text>
+      <text x="52" y="115" font-size="11" fill="#7A6E6B" text-anchor="end" font-family="monospace">6</text>
+      <text x="52" y="45" font-size="11" fill="#7A6E6B" text-anchor="end" font-family="monospace">9</text>
+      <polyline points="110,120 220,90 330,77 440,116 550,137 660,139 770,143" fill="none" stroke="#E1211B" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="110" cy="120" r="5.5" fill="#fff" stroke="#E1211B" stroke-width="3"/>
+      <circle cx="220" cy="90" r="5.5" fill="#fff" stroke="#E1211B" stroke-width="3"/>
+      <circle cx="330" cy="77" r="6.5" fill="#B8801A" stroke="#fff" stroke-width="2.5"/>
+      <circle cx="440" cy="116" r="5.5" fill="#fff" stroke="#E1211B" stroke-width="3"/>
+      <circle cx="550" cy="137" r="5.5" fill="#fff" stroke="#E1211B" stroke-width="3"/>
+      <circle cx="660" cy="139" r="5.5" fill="#fff" stroke="#E1211B" stroke-width="3"/>
+      <circle cx="770" cy="143" r="7" fill="#12855A" stroke="#fff" stroke-width="2.5"/>
+      <text x="330" y="60" font-size="12.5" fill="#B8801A" text-anchor="middle" font-weight="700" font-family="monospace">R$ 7,42 · pico</text>
+      <text x="770" y="126" font-size="12.5" fill="#12855A" text-anchor="middle" font-weight="700" font-family="monospace">R$ 4,57</text>
+      <text x="770" y="112" font-size="10" fill="#12855A" text-anchor="middle" font-weight="700">menor do ano</text>
+      <text x="110" y="272" font-size="12" fill="#4a403e" text-anchor="middle">Jan</text>
+      <text x="220" y="272" font-size="12" fill="#4a403e" text-anchor="middle">Fev</text>
+      <text x="330" y="272" font-size="12" fill="#4a403e" text-anchor="middle">Mar</text>
+      <text x="440" y="272" font-size="12" fill="#4a403e" text-anchor="middle">Abr</text>
+      <text x="550" y="272" font-size="12" fill="#4a403e" text-anchor="middle">Mai</text>
+      <text x="660" y="272" font-size="12" fill="#4a403e" text-anchor="middle">Jun</text>
+      <text x="770" y="272" font-size="12" fill="#4a403e" text-anchor="middle">Jul*</text>
+      <text x="60" y="292" font-size="10.5" fill="#7A6E6B">Valores em R$ por visita · *julho até o dia 20</text>
+    </svg>
+  </div>
+
+  <div class="card">
+    <h4>Visitas ao site por mês</h4>
+    <p class="cap">O volume acompanhou a queda de custo em vez de cair junto — sinal de que a economia não veio de comprar menos.</p>
+    <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visitas por mês">
+      <line x1="60" y1="250" x2="800" y2="250" stroke="#EBE2E0" stroke-width="1.5"/>
+      <g font-family="monospace" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">
+        <rect x="78" y="152" width="64" height="98" rx="5" fill="#D9CCC9"/><text x="110" y="176">947</text>
+        <rect x="188" y="174" width="64" height="76" rx="5" fill="#D9CCC9"/><text x="220" y="198">735</text>
+        <rect x="298" y="181" width="64" height="69" rx="5" fill="#D9CCC9"/><text x="330" y="205">660</text>
+        <rect x="408" y="182" width="64" height="68" rx="5" fill="#F0908C"/><text x="440" y="206">657</text>
+        <rect x="518" y="151" width="64" height="99" rx="5" fill="#EF4A44"/><text x="550" y="175">953</text>
+        <rect x="628" y="52" width="64" height="198" rx="5" fill="#E1211B"/><text x="660" y="76">1.914</text>
+        <rect x="738" y="97" width="64" height="153" rx="5" fill="#E1211B"/><text x="770" y="121">1.479</text>
+      </g>
+      <g font-size="12" fill="#4a403e" text-anchor="middle">
+        <text x="110" y="272">Jan</text><text x="220" y="272">Fev</text><text x="330" y="272">Mar</text>
+        <text x="440" y="272">Abr</text><text x="550" y="272">Mai</text><text x="660" y="272">Jun</text><text x="770" y="272">Jul*</text>
+      </g>
+      <text x="60" y="292" font-size="10.5" fill="#7A6E6B">*Julho com 20 dias. No ritmo diário, é o melhor mês do ano: 74 visitas/dia contra 64 em junho.</text>
+    </svg>
+    <div class="legend"><span><i style="background:#D9CCC9"></i>Estrutura anterior</span><span><i style="background:#F0908C"></i>Transição</span><span><i style="background:#E1211B"></i>Estrutura nova consolidada</span></div>
+  </div>
+</div></section>
+
+<!-- 02 REESTRUTURACAO -->
+<section class="blk"><div class="wrap">
+  <div class="sec-eyebrow"><span class="rule"></span>02 — O que explica a melhora</div>
+  <h2 class="sec">Estrutura nova contra a anterior: <em>28% mais barata.</em></h2>
+  <p class="sec-lead">A partir de abril, as campanhas passaram a ser reconstruídas em uma estrutura nova, rodando lado a lado com as antigas para comparação direta — sem trocar por impressão, trocando por número. Julho separa bem os dois grupos:</p>
+
+  <div class="cmp-grid">
+    <div class="cmp win">
+      <div class="role">Estrutura nova · recomendada</div>
+      <div class="name">Campanhas reconstruídas</div>
+      <div class="row"><span>Visitas em julho</span><b>1.214</b></div>
+      <div class="row"><span>Custo por visita</span><b>R$ 4,27</b></div>
+      <div class="row"><span>Taxa de clique</span><b>7,99%</b></div>
+      <div class="row"><span>Fatia do volume</span><b>82%</b></div>
+    </div>
+    <div class="cmp">
+      <div class="role">Estrutura anterior</div>
+      <div class="name">Campanhas originais</div>
+      <div class="row"><span>Visitas em julho</span><b>265</b></div>
+      <div class="row"><span>Custo por visita</span><b>R$ 5,95</b></div>
+      <div class="row"><span>Taxa de clique</span><b>7,36%</b></div>
+      <div class="row"><span>Fatia do volume</span><b>18%</b></div>
+    </div>
+  </div>
+  <p class="body">A estrutura nova entrega a visita <b>28% mais barata</b> e já responde por <b>82% de todo o volume</b>. É a evidência mais direta de que a reorganização valeu a pena — e a razão pela qual a recomendação nº 1 deste documento é migrar o que resta.</p>
+
+  <h3 class="sub">Campanhas: onde está o melhor retorno</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Campanha</th><th style="text-align:right">Visitas</th><th style="text-align:right">Custo/visita</th><th style="text-align:right">Taxa clique</th><th>Leitura</th></tr>
+    <tr class="hi"><td>Institucional (marca)</td><td class="n">458</td><td class="n">R$ 2,69</td><td class="n">24,76%</td><td><span class="badge up">destaque</span></td></tr>
+    <tr class="hi"><td>Concorrentes</td><td class="n">389</td><td class="n">R$ 2,67</td><td class="n">6,25%</td><td><span class="badge up">mais barata</span></td></tr>
+    <tr class="hi"><td>Tubulares (nova)</td><td class="n">640</td><td class="n">R$ 2,89</td><td class="n">7,98%</td><td><span class="badge up">destaque</span></td></tr>
+    <tr><td>Cartucho (nova)</td><td class="n">709</td><td class="n">R$ 3,39</td><td class="n">7,80%</td><td><span class="badge up">destaque</span></td></tr>
+    <tr><td>Sobreborda</td><td class="n">433</td><td class="n">R$ 5,58</td><td class="n">7,94%</td><td>na média</td></tr>
+    <tr><td>Aletada</td><td class="n">196</td><td class="n">R$ 5,37</td><td class="n">6,95%</td><td>em maturação</td></tr>
+    <tr><td>Imersão</td><td class="n">170</td><td class="n">R$ 6,15</td><td class="n">7,39%</td><td>em maturação</td></tr>
+    <tr><td>Infravermelho</td><td class="n">304</td><td class="n">R$ 7,93</td><td class="n">8,37%</td><td><span class="badge wa">custo alto</span></td></tr>
+    <tr><td>Traço Elétrico (nova)</td><td class="n">276</td><td class="n">R$ 8,84</td><td class="n">8,17%</td><td><span class="badge wa">custo alto</span></td></tr>
+    <tr><td>Cartucho (anterior)</td><td class="n">1.025</td><td class="n">R$ 8,23</td><td class="n">7,46%</td><td><span class="badge nu">migrar</span></td></tr>
+  </table></div>
+
+  <div class="callout">
+    <h4>O dado que mais chama atenção</h4>
+    <p>A campanha <b>institucional</b> — quem busca "SMS Resistências" pelo nome — tem taxa de clique de <b>24,76%</b>, mais de três vezes a média da conta, ao custo de <b>R$ 2,69</b> por visita. É o público que já conhece a SMS e está procurando vocês diretamente. Hoje ela representa uma fatia pequena do investimento. <b>É o dinheiro mais bem gasto da conta.</b></p>
+  </div>
+</div></section>
+
+<!-- 03 PRESENCA -->
+<section class="blk"><div class="wrap">
+  <div class="sec-eyebrow"><span class="rule"></span>03 — Presença na busca</div>
+  <h2 class="sec">Empate técnico <em>na liderança do mercado.</em></h2>
+  <p class="sec-lead">Das vezes em que alguém pesquisa os produtos que a SMS fabrica, a marca aparece em cerca de 39% das oportunidades. Os outros 61% são buscas em que a SMS não apareceu — espaço ocupado por concorrentes. E entre os que disputam as mesmas buscas, a posição é esta:</p>
+
+  <div class="card">
+    <h4>Quem disputa as mesmas buscas</h4>
+    <p class="cap">Participação nas exibições entre os anunciantes que competem pelos mesmos termos (jan–jul).</p>
+    <div class="bars">
+      <div class="bar-row"><div class="bar-lbl">Mercado Livre</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">23,25%</div></div>
+      <div class="bar-row"><div class="bar-lbl">Corel Resistências</div><div class="bar-track"><div class="bar-fill" style="width:98.8%"></div></div><div class="bar-val">22,96%</div></div>
+      <div class="bar-row"><div class="bar-lbl me">SMS Resistências</div><div class="bar-track"><div class="bar-fill me" style="width:96%"></div></div><div class="bar-val me">22,31%</div></div>
+      <div class="bar-row"><div class="bar-lbl">Resist Ind</div><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div><div class="bar-val">&lt; 10%</div></div>
+      <div class="bar-row"><div class="bar-lbl">Delta Resistências</div><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><div class="bar-val">&lt; 10%</div></div>
+      <div class="bar-row"><div class="bar-lbl">Voltec / Ibrel / HG</div><div class="bar-track"><div class="bar-fill" style="width:35%"></div></div><div class="bar-val">&lt; 10%</div></div>
+    </div>
+    <div class="legend"><span>A SMS disputa a liderança com dois nomes, com diferença inferior a 1 ponto. Os demais fabricantes aparecem bem atrás.</span></div>
+  </div>
+  <p class="body">A leitura de negócio: <b>a SMS está empatada tecnicamente na liderança</b> do seu mercado no Google, atrás apenas de um marketplace generalista e de um concorrente direto. É uma posição boa — e disputada de perto.</p>
+</div></section>
+
+<!-- 04 PALAVRAS -->
+<section class="blk"><div class="wrap">
+  <div class="sec-eyebrow"><span class="rule"></span>04 — Palavras-chave</div>
+  <h2 class="sec">As buscas que <em>sustentam o resultado.</em></h2>
+  <p class="sec-lead">As buscas que mais trazem gente para o site, e o que cada uma indica:</p>
+
+  <div class="tbl-wrap"><table>
+    <tr><th>O que a pessoa busca</th><th>Campanha</th><th style="text-align:right">Custo/visita</th><th>Leitura</th></tr>
+    <tr class="hi"><td>SMS Resistências <em>(nome da marca)</em></td><td>Institucional</td><td class="n">R$ 2,57</td><td><span class="badge up">aparece em 89% das buscas</span></td></tr>
+    <tr><td>resistência tubular</td><td>Tubulares</td><td class="n">R$ 2,93</td><td><span class="badge up">barata e relevante</span></td></tr>
+    <tr><td>resistência elétrica tubular</td><td>Tubulares</td><td class="n">R$ 2,83</td><td><span class="badge up">barata e relevante</span></td></tr>
+    <tr><td>resistência para tanque</td><td>Sobreborda</td><td class="n">R$ 5,28</td><td>aparece em 52% das buscas</td></tr>
+    <tr><td>resistência aletada</td><td>Aletada</td><td class="n">R$ 5,49</td><td>aparece em 62% das buscas</td></tr>
+    <tr><td>traceamento elétrico</td><td>Traço Elétrico</td><td class="n">R$ 5,92</td><td>termo caro do setor</td></tr>
+    <tr><td>cabo de aquecimento</td><td>Traço Elétrico</td><td class="n">R$ 8,89</td><td><span class="badge wa">custo elevado</span></td></tr>
+    <tr><td>resistência elétrica <em>(termo genérico)</em></td><td>Tubulares</td><td class="n">R$ 4,91</td><td><span class="badge wa">muito disputado</span></td></tr>
+  </table></div>
+
+  <div class="callout warn">
+    <h4>Onde há dinheiro sendo mal aproveitado</h4>
+    <p>O termo genérico <b>"resistência elétrica"</b> gerou 24 mil exibições no período — o maior volume da conta — mas com o pior aproveitamento: a SMS aparece em apenas <b>10%</b> dessas buscas e poucas viram visita. É gente pesquisando desde resistência de chuveiro até componente eletrônico. <b>A proposta é reduzir a exposição nesse termo e realocar a verba para as buscas específicas por produto</b>, que custam menos e trazem quem realmente compra.</p>
+  </div>
+</div></section>
+
+<!-- 05 PLANO -->
+<section class="blk"><div class="wrap">
+  <div class="sec-eyebrow"><span class="rule"></span>05 — Próximos 60 dias</div>
+  <h2 class="sec">Cinco prioridades, <em>em ordem.</em></h2>
+  <p class="sec-lead">Cada item tem um porquê ligado a um número deste relatório.</p>
+
+  <div class="recs">
+    <div class="rec"><div class="rec-n">1</div><div class="rec-b">
+      <h4>Migrar o que resta para a estrutura nova <span class="prio p1">P1</span></h4>
+      <p>A campanha antiga de Cartucho ainda consome verba a R$ 8,23 por visita, enquanto a nova entrega a R$ 3,39. É o ganho mais rápido disponível.</p>
+    </div></div>
+    <div class="rec"><div class="rec-n">2</div><div class="rec-b">
+      <h4>Ampliar a campanha institucional <span class="prio p1">P1</span></h4>
+      <p>Melhor taxa de clique e um dos menores custos da conta. Quem busca a SMS pelo nome é a demanda mais qualificada que existe — e hoje ela recebe pouca verba.</p>
+    </div></div>
+    <div class="rec"><div class="rec-n">3</div><div class="rec-b">
+      <h4>Reduzir a exposição nos termos genéricos <span class="prio p2">P2</span></h4>
+      <p>Realocar para as buscas específicas por produto, que já provaram custar menos.</p>
+    </div></div>
+    <div class="rec"><div class="rec-n">4</div><div class="rec-b">
+      <h4>Revisar Traço Elétrico e Infravermelho <span class="prio p2">P2</span></h4>
+      <p>São as duas frentes com custo por visita acima de R$ 7,90. Vale testar uma abordagem mais restrita antes de manter o investimento atual.</p>
+    </div></div>
+    <div class="rec"><div class="rec-n">5</div><div class="rec-b">
+      <h4>Retomar a agenda do site e da medição <span class="prio p3">P3</span></h4>
+      <p>Hoje é possível provar que a SMS recebe mais visitas por menos dinheiro. O passo seguinte — mostrar quantas viram pedido de orçamento — depende do site novo. É o que muda o patamar da conversa.</p>
+    </div></div>
+  </div>
+
+  <h3 class="sub">Boas práticas que seguem valendo</h3>
+  <div class="items">
+    <div class="it"><div class="it-ic g">🛡️</div><div><h4>Bloqueio contínuo de buscas irrelevantes</h4><p>A lista de bloqueios segue ativa e é revisada a cada ciclo, sempre no nível de cada campanha para não afetar as demais frentes por engano.</p></div></div>
+    <div class="it"><div class="it-ic b">🎯</div><div><h4>Correspondência controlada</h4><p>As campanhas trabalham com correspondência de frase e exata, o que mantém o anúncio ligado ao que a pessoa realmente procurou.</p></div></div>
+    <div class="it"><div class="it-ic a">🧪</div><div><h4>Teste antes de trocar</h4><p>Toda mudança estrutural roda em paralelo com o modelo atual antes de substituí-lo. Foi assim que a estrutura nova pôde ser comparada com números, e não por impressão.</p></div></div>
+  </div>
+</div></section>
+
+
+<footer class="ft"><div class="ft-in">
+  <img class="ft-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAABQCAYAAABGUdo+AAAjIUlEQVR42u19eZRkVZH+F5mVtfYOza6yyY4oDDrAyKKigKJyFEV0lGV0ELcDCDro6A9cZnRwGVFGQVwABQRhZMBlQHFQQAYQWVSQVUCWBrqhl+qqyuX7/fG+6Iy+/d7LrOrqxqHznpMna3nv3vfujbgR8cVyDb3Wa2u5kewD0DKzFslZAA4C8GIAswE8CeBKM7uGpJkZdU/VzJq92eu15xwzkFyPpJHcj+TlXLU9RvJ0khuGewZ6s9drzybhGskRfWwa+/TP8SSfFAM09Wnp29sFJGs9Zui1Z5sRzNUUktVp7Lei78+RbIjo6zkSoklyXD+fpPtnkRzprVCvPRsqTY3kAMmZ+t3C/6zLfiokK5Eh9H1iQvhFrSGJ8XuSG5Mc7DFEr61tZqi6eiKGGAj/GyI5j2Sty76GQl/ODAeSfEaE3grEn/7O8Ptykvs5k63pOejrkUGvRRSH5DDJfQDsCWA9ko8CuB7AHwE8BaBbpGc865YVoUk7AvgagFkACMAlTaOADk1jDQLYTH+rAGj1VqvX1qREGHQ7geQuJP8z6O/exkieTfJ5rjpNwW64VH1N5KhMSzRG2vzao9TPjN6q9dqaZIia6+UkdyZ5U47aElWZb4mBhjqpLyLgPv18qIznZujPmeEKkvuSfE8wtJkY3G93Bu6tWq+tKWYYDDr+XiQfKDF0WyLOMZJHRLuggw1RITmf5ENJ3/59ttskYs4HE0Z0BnndZCRTr/XaZJnBAiFuGCTDRAfUhySvlMFdITlYpo7p+1OJkezo0bUa21GtEZJ3Jgzhn317EqLX1rR06CPZL5UlZYZGjvrixPlnktsIku0vUpf0/RKSS4Oq5H0uIvk3ybVDJO8PY7kUeYrkS9YWQ1R65LHuGdIAGmbWAPBRZHFETQAOpxJAVR/mID+zAawHYLmZTeRJHwAugT4GYCTca0KJzjKzm/QsTuRzAMzLeeRHkMU3Ied5eq3XVpsh+qQy7UFyWYHN8EOS5yaqjn8vJrlbkR0RDOlXyOZohdAMSi2ap+eokJyn69+QeK3rweiuRQ/6mmw9I2Udsx0kDWYCOAvAsHZs6lMHcBKA70pirA/gAN3j2kQdwFhJ/x7ucSyAAazqZ/iKmS1UlOuSsOu/Utcx0V5uNLM6yT5JtV7rtWlVl0DyhID2RH39DP1/hr5PD7u1S4j7SW6SJyE8XIPk7pIOzcQ4vjNEsMZAvwrJ6xKj273Ur+8hTL22JpnhhSQfFbFG4vsVyQ3C9QMkLw4M4UxzowLt3Bjuz2GKbyTIlN/7D5GRQh9bkbwv3OPXP0TyBTK4ewhTr027ugSSn0l2/RbJp0nuof8PC4VaP8CgkXl+KAIdckYTE/Rrt98u8XQ7U/xeMGuMpnXo94jACFGinKPr11r4dw9lWkeamZHkTgA+LLuhT98G4Bwzu15qSR+yOKSZALYMCJHHH91qZstDv023QZTddiyA/mALUDbIxWb2uPqfQ7JftoEBeJXQpmZAowzAj9XnRG8Fe21akSV9n5mD8z9O8kX6//xgP7wqsTMoVOrVUd0JyFWN5EYkn0ikCuW7eF6QKINBOmwv1aiVjPWAq3BrA13qSYh1y3aokdwawKFRaOj7XDO7TQS+GMCo/r5/uM4jTB8CcF/Y+b21zKwu6TMvoFJOXxeZ2UMag8j8IHX97+XIoln9Hh/re2a2IOZV91qvTQdD+E58VvAW+078CMkto9Ed7ns4iWMiyZ9qdzeSM2RvzNDv80neloMULZJnuxIiXyvBAL8wkQ4t2SD7rC3fQ6+tO8zgBLhVCJyLxPrVFPXR9buEcOwYaHesrput0I1aQK8OCY6+aBhf4WEiqZFP8sW6J3XG/TKobtW1kRjUU5me20zgmP2A1I23A3geMidZRWrQYmTOuShJqrr+H5E51RiM6cUAfqPLGzKi60oqqgE4DG1HnwV160Iza6RhHhrnA7on0iMB/MzMlooRLPTXa702aYYw7aqmnXk+yVsSdYkkv58YxjUx03CO6tNS4lB/UoDAVZ+dkjAQv+cekvMTKeTOuPUStawRHH9bxcSltdl6EuI51syMgkJNoQ57IysC1kQ7kK4O4Idm1hKR9uveFoB9AGweJIN/vqtd3vX6VjCsD012eodPLzWzJ4JEAICKfj4cwMY5Rv5lZnYvMni2lyHXa9MqLQZJXhVg0HrIaRjKU7VInpcTDn6XIFWXCCMhuagmL3Oaw7CM5N6pjaLvWSRvzbFpFpDcVtKnryzfotd6bVJqk75fllPviCQ/EtSXFQav0KAFAfVxNebTzgiBIXyM1yZppo0QCjIzepoDQ7xbDNdI0lS/Fvp/VmKXegFTz1HNSerM4VjZY1xBll9wWbiuGa7ZG8B8tH0CBmARgJ/o/x7lWtX/mwCOQNtXEQ3gn5nZEhG2V+oYkAH+98iiaRvhWQHgHDHaGHrVNXptmqXDnCSX2aXDf0kqVJNCAMMkfxekg6tX56cFykgO63sDGc6pR3sJyZcHlao/3PuGxIj25zqvF9Haa2uCIZzA3yO1JKokYyQPCXp8heRs/f6aJF20KcL2BP9qwRiNnDDy/w7VOSIjDSlaNiJRTdV4XSmltNd6bboYwvX0y3JyGRYphCMStV9/XSBSlw7XhCjWCJu6A+/7BcUJTkhsDnfeHV5Qd+m76rPa80z32nQygxPe1iTvzVFlzoulKMP1BwbibAamOCxHOlSCAf5ATsXu5a4uBQZy9eymJKW0KSZ1NKrWW8VeWxMMcUROzkNDBcG8zL1Dm30kr865/uoQpxRDO1yyHJns8jFUYzDnmY5OUCVnonMC4/Skw1RUgjXtwfy/uFMFoh0Oh5DETLcbAgw6LyTr7K8EoRQCPST2q58HA0T71YKsuJNzpMk8kn/IKX//jHI03Pi2v4aJHOjmfyHCsS9ZgP6yMuWaxDlFNXwmu+ja3WauKabQ8877v4Z4BOLbImSsRXvgi3HXVopov6JNU1vjf7TW1UTFGtIabERyYU7NpgUktw904ZG2xxUwz1eTvit/NTtLRBDCi3hq4HCo1lZJDKy+EAeTF+cyFCa3MgnCr4Txh8IzWRwrQoHTwSSJ0Rjfqab3GNFc+P9naex4hoLvojPXJnPpmY7IsR2WkzwwZ20OEZHWgxozTvItYf0th+kOKajG9xOfi2A3bKcEoVRVulv53RZQr1qiCVQK3tESGhkK41VWS9IkA1jOgCMuKkPwV39J1baqHnAwVUOSF04Zr6+kP9d1h5I+BoKO2u+ZWNN4BFQtj1E6zGXfs6EPh3m4MQct+g3JuXEdNF835oR1fC8QlxWoZd9M1Cvf+U/VmoyEe76Xwzx1kh9O+hxIbI+BsLHUPA9jKrSd0Nwqm3ZsfR2ykQhgmR6souCv0bDzb4GsMtsAgOUAFgJ4KubcesaT8mdriqGpIAsGW4Ys0MxizR1NzMYA/NplyMKPF4dMK2hc0/UNMxvTYhCZF3R1JaeRnAlgmd6dQZWciczb6tXnlun9EU7OrAComdn4WmKKTQHsjJVzoAHgBjNb5HWZdF7DUQD+Bm0vcRXAUgBnK6S7GoL/TO8xoY1r3zBGS/cuBPBTMxtXLsMyFS44XP27V7wK4EYAZ/lppMhCyccTmhkPqaZNrS91jyEL/Jsd5r+h6+rIvOtjOSeYGgC3QWNwYpshSHopQ088JzLX+RMAngbwtJktU8ebANgPwPMBvBTAS0SU/kBLAfyO5B3Ijla9Xi/hnNjSA1fFWC2Sw2Y2Knx8VwAbAfhbZKmFFV07oWe6luT1AB4DcLuZ3a/nmg1ghOQiZ7DVIKohjemlGidkgG4HYDcAL9Rn8/B8pme8FcDtJB8EcBuAO8SkLk3rayIdMhx2cjRWTvD3eb5Kv9cANEhuBuAjaIdHeMjFeQB+GaJZ4Qwe1vAVaB9ggjDW3QB+r3uXiFZOw8o5FYasONknzewZP0wl3Yh8jsxsTH9bD8AOJLdFltexqehjyIlcz+ufOwBco8NeHgXwBwCPalMe0Qa8tGgyWzmfpqIVvSDVhiQ/RPJ6dt8Wkvy89MRKjo7Yr8+OJD8t3LzVZd8tkneopMrBoS+LWVxTJK5Z3gfJPUmeJKdVk5NrdZWDPFK1hSzPZpsm1G1mcK6ltY3uJ/k8Xecq6hmJId3UUbg7xRTPaEeEe7+cGMauLp2bOPy+naBKvrb/lhzdVQu2STWMs62g2i+INiY7/zGg8bc66PGQUD6nkquGdehshojiugKiTI9TbeYQ9V1u0AVG8Al4f0hGyeu71aFvDxk+SaURV5ycOYmz0CzE9jjRvkje07GCZ0udS2XPR2H6J0il6Wi3TAaRC6DGbM11alB/J6iqILmbEnMaiZH78YQgI5hQDYxxVQ4qNU7yzeGZ/k5QbjOxNe73hKEw9xuEZzOSb9a5EXd22BCbJZ+idVhC8pLkWbtmiAntvg/nTEC3zXePJ0m+0Y10jXtSsptOtu8YINZQtbgtAnGPTIIh3NBcj+T7gpc3jdefyu4Ud7afK4/YiqSYkKm5XTJOBCaOEmE2kwLFhyXgxM+Skvctkr+OVftKfBw7hZL18d0elhTqJ7mpEKS0UPIYyUNzfBt9CSJ5bTL3zdWYf+aU3XHGODVFzzoxRFNVGVhwVoCjBfUORFMPk3aQxnxf6KNRQuz18GmWPKePfXFQH4Ynid9vpnPQWl0wad7zlc1BfM+HSL5DYzocPRwiSK0beDoggX2JGjSRhFG8LBD0h5I5cyTqDasQRj6C9fc56rUnHDkSeUGiUk2E47hKYVHNxRd1z0TJetf1//Gcz0QJvbSSfr9NcuOVmLTLXS49WqlVIlVaJYfnXUryrTlHr6YM1Czpv9mBKT4T1CYr8zWE318Yds5myfiNDqfslDFSlGjLSX4glIQfITmnjCg7MMdMkr/IGf/SwGj7JdGvzsBfFiH3dbFpfLkgmO+D+v8Hk7KXzSAZZ5b5igLTbR60kkbOBjSZNlGy4focnRullJHsBLvGBA4LaNFvBIU2BL3ug3aONnOQHi9pGAtY5Y3l7VoAC9R/P4A9AGxQ0r/DaMsBvN7Mrs5DMcICD6uywwYAfiRkq5XzbOm7Q0jJ75Ad5FHXNRsD+Lvk/qJ58P4+ZmafFUo2KhRkWDDk8m4QMTNbTvJvAVwZYGpPBjrGzL6hd7wSwIvQzneuIDtu95XqI7cgWDhWdw6AH2sdYn42kJW83BnABUIdI3K1GMCrzOxGkoOOHBUxnsY6BdlhK0A7UcnbAwD+BOAuIaFpW08I4J7Ikp2K1iJCxqea2SdJGrrUv7w9RvIYGWbzgwd7tv52qCo8dDqlvqg9IkN7D+nzNZJzFfqxHclXKySZBZxfDxUl5hc5yIIndVDVJFiw+zST3eZbJA/SiZ1zwg5v+n13kscGHbrIBmkGSfhud2YG9GN2NwV+g3r4/pxAO4ayk19JpIK3A+IB6x2kw16JBuDf95J8h6JWmVTeoPwd6PJ9fC43Ea15u09n1b1SFTlmdNooBIwcJCdikUbimsWoHw6PLplhOcnjHcnpEPoxoqrNeUyRd2K9T/Ln0v41OYM5L3tmCVO4yN6r4PmiF/7skDhTxAx+RvOWeechRPQsmYM3BdFfNrdPKjmnv2xeS2yIGsmLcmyyq6QKnZIwpl/z8TCftS6I9V0Fc/5EUtQsbi5fmEwka4BCKyTfJmP/OD9lKIF1+4Pd0h+qlldz5ulQnVXXKtlEzyJZ6WRU17VgByeowFBI6BjRw4zE+JOQPNLogiiOy9m985JS+hMsPQ+B8N/f64hTYrT5/fvICMvbwRth9zskx/Dz4LihJNSlLwk/2EDwbRFa0gwJ+XOnYDsMaDd9KieY71OSAHnj/SiEclTK7Ba904D8AWXrmZ4//WMFAQ5PIeSiPwfhqiTw71AI7fDA08GEXiKUvkuObRKf91aS89EFTPWvMfQ3LV9SImK31UI1SoxMkvxRXiBZyeL4Ao1IcqWisBV2yOE09dGJVuUS8xY4FszaMbz70GQDBMPvX8ox/tN2pEOpk/RBvKKAIH8ZysPE91rAcKpnWUGwsDltEMrGtLoAYJ4OYd1TckSy4NjfnPikSjLXeRqBAwufLlgHB1L2RQdufzwUqh3pkmijKD+/AJWIk/eayUaDhl3ilAIkjMxOyZlbMElvKdEp3WvrB4hsPJVdLgYtioHPKlAjfcw/Sj+2bplO3ycXqKJ5quoykm9LHJKDXYzxoi7QtYgGvTUiR9MUfVzttr8oTZJ+thZNs6B0zgc7QXwXIiuBXhF6M9ApFkf/ryoI75pgycfmaNP3ANwAoNkl9l5R7FNL41yeIDexVYW6AMCMYIDWkJVtz7vHEbBTdYDIgFCk5YrnmRRTCOFqKXDtA4r3iSXfIxqzFYADQgBbt+3AktgtBgTOAHzezM7Xe1UKUDAkMUwGYBu0j+0tGsdLzfyTmV0o1Kq5OvFZYgDTeje9P2kqs0XgO+qzhf5WC9e3ggQZRlaC54G8V9X33KKJ9wvOFyS3oSDGRjdiPEQU/lQPsGUC1TmTXAfgmRCktaxT9wpInKlAwsUli+qTAACDaJ978DIAOyRwcoTlfgPgAgXMjZNsijBGkJ2s05gsUwhOHCN5EoCLk/FMTFcD8FqS/yEGXpwHGecEIm5TNnyY96sAfNkjSYN62yjR4z3q9CVdrEsVwPcBnOaEPJWI43BvVRvrqOZ+B63di5GdaT0X2SmpcxSU+rRg+idI/lkw8w1m9oz69ecsizyudtqJHtYOsUg7XTcc7wWoKCZ6JmfyXBosFbERXRzKrWtHNWH9Cjm+Xfh66kMYALAhgHtEcB42/k75TVIs3Zn0TDNbGIiiIQy+HnbByTZPGvoxsiJhh2Dl42r9uV8AYAtFaKILvH5/hUCjYFPwMX4L4GhFmFoqwQqGGQ6S+zVhjioFY9wA4DjN4aD+PpUQfA9Rb2jXfzWAd4jxNyi5bxMxjbd3A7iH5CXSdO4T/Swt6aPZSU3xwrSTCVse85h7EW1fgTozKhGGELbbEVVRafW6FuYpLQRy7q+iXSw3MtymOWqWq3BXA/hRMNxqWqClcpxNNXS7rjmcAPCLHOb38PntALzazEY7bBCVIO0GCq71cP6HAbzHzB6U1Mtzvg3mqGljWqN3ANilxBnqYxxlZgv0t9EOO3FZGHsDwKDini4C8DU5PDdAO33Acx9ayaep/9W1UewG4DMAfgXgVIVpzCp5hFYnCdEKu35XB98lunYZobcSFakbCTEenDwT2iXHyjjex5IXeAcAOyVEFdWX30kNgxZ6bHX04MSuGg8e+AclDdIdtwJge+3KlS522G0S6ZYyzdPyVt8ckmSK1sIlO4KKt7c8xtVEskdJ/4jG+IOeu2vbQeqRz31LOR1zAXxFjBjX0dXLbgtARE/0xgA+jizfZuuyperEEKYFneopkK0SQo8u+cZkCC/JQKt0Yeg502yNLLkpqhiu/7YA3C1RXUky81a7aZOomNktJO/LYQh/nvXRzuzqi5mEOW1OwWbiEvGTZnZFJwPX11dSok/MsDmAMwsY1/sflRF9RZQwJWEgNY1XT965ImbYHMC5kggxxKVasnFawdozAAfeDupwHyqTWMy/mjaF56mEXZ+J1PIdaqHsjTXSRCAOW493eNYhMXMtD9IW074LwO5B5YrqmQE4G8DXXU1yD3AXzzlG8vmyd7YN6mSeHXg+gIsEcqyPdvZgihZ5clhN9tSAxmoIDfIYrm+JGRpY9eQgYtVje61kI68E4GSFFOqgiaxzxWWHA/KSvvszBZDctDNGB4b2s6JbAMZlN41HdYTkOwF8Tnpy3L1d9bkCwPHKgfb/jZfZQJKKDiD8J4DtA/qVSn0PDPyoUMi5mr8JMXMjvG9TfZ4gleVmAP8B4PFExToOWXpyI2dtWoHx60KT7gZwC7J00dt1zaZSiR2RmqcPckCUwslfl5p1+N9fw/Gvsay8Q79OZIOqVvFRtHOnK8mu/UchLGPOTEFClUlcU8zQRchy5RsF+rr7UU43s6ekKi0JyN7ykNzv8308gA/p59dJQv6LVKUGyd10DUukEQD8EMAPAFxnZg/nGOQ3C8XzQhU7ADgYwJEFqt/UVKbnUBsP752Gdc8O9sUa1/o6MMRYqHjRJxvo+dpZPyFCTVEf//lfzOxRtAsfII3pSplBBDwfwLeRFRFoFWyW/tzLkCXuI0jbQQEdTPrdEcB7XOKpj9foefy53ouVz7dO1dlHBRu/2cx+AOCxEE9XiTaSe7bNbMzMfmtmpwA4QGhkpRN0vq4whC/k0oJdoqUF2XkN20vusBzu4DtwxqWM6v2Q5Rq8PagjlvN+dwK4wnd8V4WCqpinJlE6/b8BeD3aJ5WiBCEcF4K1wu5Au1RP2t6FdsRAf0DaWmLYzQG8qgDF8vc6xcy+ldTvmpBHupVIJMt+XBGH1W9mdwJ4I7LyN5UyiP+5zBDNsMP6xC5A5rtAIiHcWNtGk0uugeoYGmMfZGVs8oiaAJ4UnDwAoCbo8zJkNZR8Ny5KOnoAWe2qFb4jEelYgWRoqSTN6YI5I3zLEvp4MDJE9G8kUcrzAfxDMtdLAFwenm13qTONZDzfuC4D8F2vxyRDvAiV9HCdgXD4ZJ3kTDN7DMDJmotKkZSurAOSYSigO39Elm2V7n4rHF0kN9NkUjEz1dUpk6ldbUD2wBiAvYSLN3Lm39UD33mXA/h/yDzrjbCQRSrXiqOoos1gZhPS1c2dcHq/mQA+LZuDCRRtyOLY8lS8RxKvd5ybmWifd/1BtD3p3s+fkNXu8nu3LKBF38kv0bx19G+IUZbFrDyt5RKNd52YeZ1UmfwctKVOTCq4dm/O7ux+iF2RBcuBKx89OxmHUN5zzEYWBjFXDMEcla0K4C8ArgxxVLOwclGwIriRgVBbHaDfeFDKvyILZWklwIIB+AKA/ylQnR5PCC76qcbFfC9Q3+n5c+ck6bHrFWxkLk3uX11p7fcrAuCmdZUhLOxUlPpRQRbXshxt72tKbMcomNHVLvcJtKZStFhOqKc13lEA9s8xWp1g7pax2pJEWioIdELXL0V2AOJpUS0M7aEE3UEOErMUWUjLtwEcG+jAglF7HoBPou34S9sTab8hr2JCEvE0MXM8wPE+ZH6LyNQDHYz3pVqDKSOAogE/dP5P67JRbQmxV7TrPVoCu+4K4DhN4pDQE49ynerJmE1k4d0fQX6RBUc/fuXqQVjMkwAcBuCzyIonHCTCymsLixhBBQlcSp2TSAYGnP5SQaA1ZIGGecb/YwnBeQzRkObtOABvRjsKwPv/rJk95ikCItBGyboNhg1pdWnVEbAXrKsMwQQtGQtq01kdYM8TSR4tETshlWfS0iHs1HOE4szPgUtdOixC5qmNBrZ7pi81s4+hXXd1XsGQz5SgV02SW8pIPThRY5xwL0IWpPeEbIFNumEI956rism+yJxwPv9u+9yELP/FgQ5Hh/6SY6f4M80BsPN0FYtWGPme6ypDrIBXNfHufBoE8E2hTZazED4vnye5v5ktkYTo60ZsxwyvkOzzNWQOqUYBsZqI8c8hVdVjn+iGPYANHUFKGL+qZ3wqx6B3HX4rAP+FdmhEJej3FQD/K0JeJtVyQqplGeM503tNpV2QhYysn9DYODL/yJgqZgwHCPbmhAmiVK0AOFBj1Kd6oIqShoishM46KyEcL18BMWqnmTCzJ9Gu+9PImRNqF76E5LHIgg9HkXmK+wrOTvBiwkMA+qWe7CAV5K0i4r4CKbYAwBlatDFkNaOa4dlaIs5REcWGBQiToyvOkL4LvwVZwswO4TkYGONGAO80s4c0dqtE0gDAHDHoXNlpDZIvle2xZWB8Z7bLAVweyvEvRtvXcjuyEIxqYhO5qnUwshARhgy4aij9U+uA8PUpVmozZOEug0E6rnNG9Xge3q9d+wJkAWy1HNvAd6sZ2t2/Q/KlZrZcqkF0BrmzaMjM6mKcfpLHa4zXoR1jlDJDS0jKyWZ2RyCERoROHQY2M8+im5W8V0u77oCIzhlyBslPAPgGsjgfDxh0lawvMMNdIi6XCrUCgxcAdjWzUSVSNZXEcw6yOKJmYLiqjNgP+/kMin2qSlpXpJ5dlrNO0f77lPLn5+r9a3rf8QLp3C+HXEvMuhOysI9d0SF847key2R5iIPvVACOQZb3vTlWDSqLkZKHA9iH5MUAfi00537IiSZUaEvFAu0uibBXqrrlMEMVWbjzRaHK4ECJqhKlQZQwTiQvN7OfexVtAO9H5giMqlW870YAbzOzewtC3vsK5vPtCmF/BMCbBFXPT4xobyea2QMupXOQJMh2+kdkZ4PEIDwLz/oJAHuo7P6N8j5HZugX/EuSTQAbCfp9mUCCzZCfN7JOMUQhFMpshR4i+SYAP5cBl8cUzjybIgtQO0YE+xcAN5NcjCyba2dkDrc5QQe2DsxwCYCPyBgdRNuxNiy4sagtzvF1QGDAfGR5H/uIuVLj2XfwnwE41szuCweuVJHlQ4yjfRLPrBwgYBMAZ2iHHsxhfA8M/HczuyzNj4gONjHigyRPFGNUk/HiSUX7A9gbwNMkL9emtFDwbEv21wytw77IIgJmY+Xc8tLCCuskQ2hRGlJ1btEud64WOi/8uBrUqgF95iALXCuCWasFyJcFZjhazFBx72pZTddAWAtzdlmIkY4teA4GQv0+srTSZTGTTkzRCobzrciCCvMShCzo48hhhp8C+OdgVy2OTKDxWoJfh83sPJ1gejJWdhSmqqHnyh89SYClii5CwJ9NG6KrwgLTMEan99/UzH6BLCLy14EZ0mSSClYOnSj7VHOewyXGhNSINyE7eso6VdfIUVluK1HF8p7D36UG4EsAjkyZIVEpPczkshJULGalRXjbN5kPaOeeHcGNMJcWGMjRvy8KAYwIWIyDypt/dJgDJtByo4wu4gCt5OcWVuOstpwHbOWMM112QitnEmLGWVE6Yx+yRJU+M7sdWbTnhcmiNXIWptPHiaMZ5rGKLOThjWZ2mnbJVkGqpRUUB/Zrr0c7nLmRo+JZomo40Z5gZsdDYdddpO3+Wj6HPqzqFY/vGsf5g4z0e9A+MLMe4qf8gM0+j7ZFO7d+keye9yJLT40e9FbBO6LkuVqJyvgdACcV0EsLgFWwshc3/lyZBpWqTyIuVrDwNMOhEhSjW3y5Kng07z2qHRi6gSyZpe7qk5ktkgH9WmSBYKN6BzdcY8WHtOqD/81L3viBjF4d5JsA9jSzn3gISFHSjv4+UQAI9Cn84oygFrUK1DbfwR8CcJiZfdFTWDvkWDdVNuee4GSzknGcGa4B8FYzuyM465aHDSq+c90lo77HodNIzezrgluvFrNUA/PXk/mPBB2rbrhEqCIrh/RhZHkZTwbasEArGb2rOO5SHZK4XGX9FpO8x49Zmsr5wPoe0ukyo+p/VNWil5H8E8kXrmb/pnqdC1WBelzvUtdh4btMxpmTnpdNcn+SlyXl7bttT6mI8ZdI7qpSoNVQqXruVGKjksLKZ+aU3U8PfDlfGDzKDpHJ22xCPd+vF4wT6+KeQ3Ijl77dnvFX5NgMv7+C5A908tJk2+/1/turrwEdvHi/aHBCx2stUunTo4zkAUI3JmSU9YkrHzGze1dj9/bdejsZQeOSCKMaZ3HwUtamWtlDUOe2aOcX1zXO08jKykxMQkd3VaoSdzAdGbwbsoJo22iseUHCeQWKRciiaW9Dlut7cyidM6w+62KEfjm1lkxlbj08HcCJAN4nZCVVd05XhpmfJTE6meomoRzOTGQh4idh1ejUW+TnOEuOM991+1ajWsuKZJ+wBjshOwp6J2QxVjMEpbqT8mHBwEsB/BlZBcbrPdVU2sSA7psrAKU/IHtLAdxjHSYDkyGmnD5KT4yJjDMd9Y+m3SJXDkQCEzrKNIhVq12MpwQeGSFvjqc6v5q3AYVDbAPgbWLae5AV5rrWzBaEgmsjAJ6ZyngkZ5nZYlVD30+Q7v2yY+4ws7sSSV9bHWbIWQPG5xa8WhOj+uGaS0TUE8kh8LN0rRP+WFl++f8HjBzGh7E7vG8AAAAASUVORK5CYII=" alt="Agência Molla" />
+  <div class="ft-txt"><b>Agência Molla</b> · Performance &amp; Growth<br>Dados de 1 de janeiro a 20 de julho de 2026, extraídos do Google Ads.</div>
+</div></footer>
+</body></html>
